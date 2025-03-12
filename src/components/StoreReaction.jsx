@@ -21,7 +21,13 @@ const StoreReaction = () => {
         }}
       >
         <View style={{}}>
-          <AntDesign name="hearto" size={26} color="white" />
+          <AntDesign
+            name="hearto"
+            size={26}
+            color="white"
+            accessibilityLabel="like button"
+            accessibilityHint="double tap to like the store"
+          />
           <Text style={{ color: "white" }}>22.9k</Text>
         </View>
         <View style={{}}>
@@ -29,6 +35,8 @@ const StoreReaction = () => {
             name="comment-text-outline"
             size={26}
             color="white"
+            accessibilityLabel="comment button"
+            accessibilityHint="double tap to comment on the store"
           />
           <Text style={{ color: "white" }}>8.9k</Text>
         </View>
@@ -42,7 +50,9 @@ const StoreReaction = () => {
         }}
       >
         <Text style={{ color: "white", fontSize: 14 }}>Rate Us</Text>
-        <Text style={{ fontSize: 25 }}>⭐⭐⭐⭐⭐</Text>
+        <Text style={{ fontSize: 25 }} accessibilityLabel="store rating">
+          ⭐⭐⭐⭐⭐
+        </Text>
       </View>
     </View>
   );

@@ -4,10 +4,16 @@ import { Bars3CenterLeftIcon } from "react-native-heroicons/outline";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import Feather from "@expo/vector-icons/Feather";
 
-const Navbar = () => {
+const Navbar = ({ navigation }) => {
   return (
     <View style={styles.nav}>
-      <Bars3CenterLeftIcon color="white" size={30} />
+      <Bars3CenterLeftIcon
+        color="white"
+        size={30}
+        onPress={() => navigation.navigate("ProfileScreen")}
+        accessibilityLabel="menu button"
+        accessibilityHint="double tap to open the menu"
+      />
 
       <View
         style={{
@@ -16,7 +22,13 @@ const Navbar = () => {
           position: "relative",
         }}
       >
-        <Icon name="audiotrack" size={30} color="white" />
+        <Icon
+          name="audiotrack"
+          size={30}
+          color="white"
+          accessibilityLabel="music track"
+          accessibilityHint="double tap to open the music player"
+        />
         <Text style={{ color: "white", fontWeight: "bold" }}>Rhema</Text>
         <Text
           style={{
@@ -34,7 +46,13 @@ const Navbar = () => {
           12
         </Text>
       </View>
-      <Feather name="search" size={30} color="white" />
+      <Feather
+        name="search"
+        size={30}
+        color="white"
+        accessibilityLabel="search button"
+        accessibilityHint="double tap to open the search bar"
+      />
     </View>
   );
 };

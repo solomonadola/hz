@@ -1,22 +1,27 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View } from "react-native";
+import { useFonts } from "expo-font";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import MainScreen from "./src/screens/MainScreen";
+import HomeScreen from "./src/screens/HomeScreen";
+import ProfileScreen from "./src/screens/ProfileScreen";
+
+const stack = createNativeStackNavigator();
 
 export default function App() {
+  const [loaded] = useFonts({
+    "Poppins-Regular": require("./assets/fonts/Poppins-Regular.ttf"),
+  });
   return (
-    <View style={styles.container}>
+    <NavigationContainer>
       <StatusBar style="light" />
-      <MainScreen />
-    </View>
+      <stack.Navigator
+        screenOptions={{ headerShown: false }}
+        initialRouteName="HomeScreen"
+      >
+        <stack.Screen name="HomeScreen" component={HomeScreen} />
+        <stack.Screen name="ProfileScreen" component={ProfileScreen} />
+      </stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "red",
-    alignItems: "center",
-    position: "relative",
-  },
-});

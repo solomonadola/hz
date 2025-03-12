@@ -4,21 +4,21 @@ import { StyleSheet, View, ImageBackground } from "react-native";
 import Navbar from "../components/Navbar";
 import StoreInformation from "../components/StoreInformation";
 
-const MainScreen = () => {
+const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={require("../../assets/she.jpg")}
+        source={require("../../assets/images/she.jpg")}
         resizeMode="cover"
         style={styles.img}
       />
-      <Navbar />
+      <Navbar navigation={navigation} />
       <StoreInformation />
     </View>
   );
 };
 
-export default MainScreen;
+export default HomeScreen;
 
 const styles = StyleSheet.create({
   container: {
