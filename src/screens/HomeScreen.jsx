@@ -1,5 +1,5 @@
-import React from "react";
-import { StyleSheet, View, ImageBackground } from "react-native";
+import { useContext } from "react";
+import { StyleSheet, View, ImageBackground, Text } from "react-native";
 
 import Navbar from "../components/Navbar";
 import StoreInformation from "../components/StoreInformation";
@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
     backgroundColor: "red",
     alignItems: "center",
     position: "relative",
+    fontFamily: "Poppins-Regular",
   },
   img: {
     justifyContent: "center",

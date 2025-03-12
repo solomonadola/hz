@@ -19,7 +19,13 @@ const StoreInformation = () => {
             accessibilityLabel="store profile picture"
           />
           <View style={styles.profileContent}>
-            <Text style={{ color: "white", fontWeight: "bold", fontSize: 25 }}>
+            <Text
+              style={{
+                color: "white",
+                fontSize: 30,
+                fontFamily: "LobsterTwo-Regular",
+              }}
+            >
               The Thrift Store
             </Text>
             <Text style={{ color: "white", fontWeight: "bold", fontSize: 15 }}>

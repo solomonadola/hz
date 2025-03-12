@@ -31,9 +31,8 @@ const ProfileScreen = ({ navigation }) => {
         style={{
           flexDirection: "row",
           alignItems: "center",
-          width: "65%",
-          justifyContent: "space-between",
           marginBottom: 36,
+          width: "100%",
         }}
       >
         <TouchableOpacity style={styles.backButton}>
@@ -148,14 +147,15 @@ const styles = StyleSheet.create({
     paddingTop: 48,
   },
   backButton: {
-    margin: 0,
-    padding: 0,
+    alignSelf: "flex-start",
   },
   title: {
     color: "white",
     fontSize: 24,
     textAlign: "center",
-    fontWeight: "600",
+    fontFamily: "Poppins-Regular",
+    alignSelf: "center",
+    width: "85%",
   },
   imageContainer: {
     alignItems: "center",
