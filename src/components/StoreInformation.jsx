@@ -82,7 +82,7 @@ export default StoreInformation;
 const styles = StyleSheet.create({
   mainContainer: {
     position: "absolute",
-    bottom: 0,
+    bottom: '0',
     flexDirection: "row",
     width: "100%",
     paddingHorizontal: 20,

@@ -22,13 +22,7 @@ const Navbar = ({ navigation }) => {
           position: "relative",
         }}
       >
-        <Icon
-          name="audiotrack"
-          size={30}
-          color="white"
-          accessibilityLabel="music track"
-          accessibilityHint="double tap to open the music player"
-        />
+        <Icon name="audiotrack" size={30} color="white" />
         <Text style={{ color: "white", fontWeight: "bold" }}>Rhema</Text>
         <Text
           style={{
